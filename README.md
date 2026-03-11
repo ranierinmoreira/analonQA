@@ -1,6 +1,24 @@
 # Analon QA
 
-Plataforma moderna de Quality Assurance construída com React e Vite.
+Plataforma profissional de Quality Assurance para transformar a qualidade do seu software.
+
+## ✨ Visão Geral
+
+O Analon QA centraliza testes, métricas e relatórios em uma experiência moderna e responsiva.
+Pensado para equipes que precisam de velocidade, clareza e confiabilidade no processo de QA.
+
+## 🖼️ Preview
+
+![Analon QA Preview](public/preview.svg)
+
+## ✅ Principais Funcionalidades
+
+- Dashboard inteligente com indicadores em tempo real
+- Gestão de testes manuais e automatizados
+- Relatórios avançados e exportáveis
+- Automação integrada com CI/CD
+- Segurança enterprise com boas práticas
+- Colaboração em equipe com fluxos claros
 
 ## 🚀 Tecnologias
 
@@ -43,14 +61,18 @@ analonQA/
 └── package.json         # Dependências do projeto
 ```
 
-## 🌐 Deploy
+## 🌐 Deploy (Vercel)
 
-O projeto está configurado para deploy em nuvem. Você pode usar:
+Deploy recomendado para projetos React + Vite.
 
-- **Vercel** - `vercel --prod`
-- **Netlify** - Conecte seu repositório Git
-- **AWS Amplify** - Configure via console AWS
-- **Azure Static Web Apps** - Deploy via Azure CLI
+1. Acesse [Vercel](https://vercel.com) e conecte seu GitHub
+2. Importe o repositório `ranierinmoreira/analonQA`
+3. Configure:
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+4. Clique em **Deploy**
+
+Deploy automático a cada `git push` na branch `main`.
 
 ## 📝 Próximos Passos
 
