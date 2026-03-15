@@ -89,4 +89,5 @@ Este projeto foi criado para ser uma plataforma completa de Quality Assurance, p
 
 ---
 
-**Analon QA** - Transformando Quality Assurance em 2026 🚀
+**Analon QA** - Transformando Quality Assurance em 2026 🚀 
+Ránieri do Nascimento Moreira 
