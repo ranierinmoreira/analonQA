@@ -308,6 +308,10 @@ a.btn-primary {
   align-items: center;
 }
 
+.toolbar .select {
+  width: auto;
+}
+
 .search-field {
   position: relative;
   flex: 1;
