@@ -8,6 +8,7 @@ import {
   SettingsIcon,
   TestIcon,
 } from '../Icons/Icons'
+import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import './Sidebar.css'
 
 const menuItems = [
@@ -51,6 +52,10 @@ const Sidebar = ({ isOpen, onClose }) => {
             })}
           </ul>
         </nav>
+        <div className="sidebar-theme">
+          <p className="sidebar-section">Aparência</p>
+          <ThemeToggle variant="sidebar" />
+        </div>
         <div className="sidebar-user">
           <span className="avatar">{currentUser.initials}</span>
           <div>

@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import { currentUser, team } from '../../data/mockData'
-import { useTheme } from '../../context/ThemeContext'
+import ThemeToggle from '../../components/ThemeToggle/ThemeToggle'
 import './Settings.css'
 
 const Settings = () => {
-  const { theme, setTheme } = useTheme()
   const [profile, setProfile] = useState({
     name: currentUser.name,
     email: currentUser.email,
@@ -68,11 +67,8 @@ const Settings = () => {
         <section className="card settings-card">
           <h2>Aparência e alertas</h2>
           <div className="field">
-            <label htmlFor="theme">Tema</label>
-            <select id="theme" className="select" value={theme} onChange={(event) => setTheme(event.target.value)}>
-              <option value="light">Claro</option>
-              <option value="dark">Escuro</option>
-            </select>
+            <span className="theme-label">Aparência</span>
+            <ThemeToggle variant="settings" />
           </div>
           <label className="check">
             <input

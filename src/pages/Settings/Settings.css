@@ -8,9 +8,12 @@
   padding: 1.25rem;
 }
 
-.settings-card h2 {
-  font-size: 1.05rem;
-  margin-bottom: 1rem;
+.theme-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
 }
 
 .check {

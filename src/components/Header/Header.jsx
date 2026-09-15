@@ -2,23 +2,20 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { currentUser } from '../../data/mockData'
 import { usePortal } from '../../context/PortalContext'
-import { useTheme } from '../../context/ThemeContext'
 import {
   BellIcon,
   CloseIcon,
   LogoutIcon,
   MenuIcon,
-  MoonIcon,
   SearchIcon,
   SettingsIcon,
-  SunIcon,
   UserIcon,
 } from '../Icons/Icons'
+import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import './Header.css'
 
 const Header = ({ toggleSidebar, sidebarOpen }) => {
   const navigate = useNavigate()
-  const { theme, toggleTheme } = useTheme()
   const { projects, tests, notifications, unreadCount, markAllRead } = usePortal()
   const [query, setQuery] = useState('')
   const [showSearch, setShowSearch] = useState(false)
@@ -97,13 +94,7 @@ const Header = ({ toggleSidebar, sidebarOpen }) => {
         </div>
 
         <div className="header-actions">
-          <button
-            className="icon-btn"
-            onClick={toggleTheme}
-            aria-label={theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'}
-          >
-            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-          </button>
+          <ThemeToggle />
 
           <div className="header-popover">
             <button
