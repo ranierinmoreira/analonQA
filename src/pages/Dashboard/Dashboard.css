@@ -1,0 +1,208 @@
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.kpi-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.2rem 1.05rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.kpi-card span {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.kpi-card strong {
+  display: block;
+  font-size: 1.85rem;
+  letter-spacing: -0.03em;
+  margin: 0.35rem 0 0.2rem;
+}
+
+.kpi-card em {
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--success);
+  font-weight: 600;
+}
+
+.kpi-warning em {
+  color: #d97706;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.15rem 1.2rem 0.5rem;
+}
+
+.card-head h2 {
+  font-size: 1.05rem;
+}
+
+.card-head p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.chart-card,
+.activity-card {
+  overflow: hidden;
+}
+
+.week-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  height: 220px;
+  padding: 1.5rem 1.2rem 1.2rem;
+}
+
+.week-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 0.4rem;
+}
+
+.week-bar {
+  width: 100%;
+  max-width: 42px;
+  border-radius: 10px 10px 4px 4px;
+  background: var(--primary-gradient);
+  min-height: 12px;
+}
+
+.week-value {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.week-col small {
+  color: var(--text-muted);
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0.4rem 0.4rem 0.8rem;
+}
+
+.activity-list li {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 0.8rem;
+}
+
+.activity-list span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 0.4rem;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+
+.activity-success span { background: var(--success); }
+.activity-danger span { background: var(--danger); }
+.activity-info span { background: var(--info); }
+.activity-muted span { background: var(--text-muted); }
+
+.activity-list p {
+  font-size: 0.9rem;
+}
+
+.activity-list small {
+  color: var(--text-secondary);
+}
+
+.attention-list,
+.spotlight-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0.5rem 0.8rem;
+}
+
+.attention-row,
+.spotlight-row {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem 0.7rem;
+  border-radius: 10px;
+}
+
+.spotlight-row {
+  grid-template-columns: 1.2fr auto 140px;
+}
+
+.attention-row:hover,
+.spotlight-row:hover {
+  background: var(--bg-hover);
+}
+
+.attention-row svg {
+  color: var(--danger);
+}
+
+.attention-row span,
+.spotlight-row span {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.coverage {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.coverage .progress {
+  flex: 1;
+}
+
+.coverage small {
+  width: 36px;
+  text-align: right;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+  .kpi-grid,
+  .dashboard-grid,
+  .dashboard-grid-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .kpi-grid,
+  .dashboard-grid,
+  .dashboard-grid-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight-row {
+    grid-template-columns: 1fr;
+  }
+}
