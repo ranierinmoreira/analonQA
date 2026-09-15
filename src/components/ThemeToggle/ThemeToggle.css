@@ -40,6 +40,10 @@
   box-shadow: var(--shadow-sm);
 }
 
+.theme-toggle-header {
+  margin-right: 0.15rem;
+}
+
 .theme-toggle-sidebar {
   width: 100%;
   background: rgba(255, 255, 255, 0.04);
