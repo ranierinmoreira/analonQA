@@ -1,19 +1,29 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
-import Home from './pages/Home/Home'
+import Dashboard from './pages/Dashboard/Dashboard'
+import Projects from './pages/Projects/Projects'
+import Tests from './pages/Tests/Tests'
+import Reports from './pages/Reports/Reports'
+import Settings from './pages/Settings/Settings'
+import NotFound from './pages/NotFound/NotFound'
 import './App.css'
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/tests" element={<Tests />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
-    </Router>
+    </BrowserRouter>
   )
 }
 
 export default App
-
